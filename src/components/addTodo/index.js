@@ -19,6 +19,7 @@ const AddTodo = ({ submitTodo }) => {
                     ref={(element) => {
                         input = element;
                     }}
+                    placeholder="Type Todo here!"
                 />
 
                 <button type="submit" className="todo-submit">
