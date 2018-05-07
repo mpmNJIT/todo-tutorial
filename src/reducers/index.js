@@ -18,7 +18,15 @@ export const reducer = (state = initialState, action) => {
                     },
                 ],
             };
-
+        case types.DELETE_TODO:
+            return {
+                ...state,
+                todos: [
+                    ...state.todos.filter(todo => (
+                        todo.id !== action.id
+                    )),
+                ],
+            };
         default:
             return state;
     }
