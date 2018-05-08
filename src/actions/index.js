@@ -21,6 +21,12 @@ const actions = {
       id,
     };
   },
+  markTodo(id) {
+    return {
+      type: types.MARK_TODO,
+      id,
+    };
+  },
 };
 
 export default actions;

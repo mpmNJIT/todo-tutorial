@@ -14,6 +14,7 @@ export const reducer = (state = initialState, action) => {
           {
             id: action.id,
             text: action.text,
+            marked: false,
           },
         ],
       };
@@ -26,6 +27,9 @@ export const reducer = (state = initialState, action) => {
           )),
         ],
       };
+    case types.MARK_TODO:
+      return state.map(todo =>
+        ((todo.id === action.id) ? { ...todo, marked: !todo.marked } : todo));
     default:
       return state;
   }
