@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/actions/test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
@@ -71,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/todoList/test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
@@ -285,12 +285,12 @@
       <workItem from="1525808614059" duration="621000" />
       <workItem from="1525815745465" duration="628000" />
       <workItem from="1525816470034" duration="27000" />
-      <workItem from="1525816747738" duration="5212000" />
+      <workItem from="1525816747738" duration="5254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8251000" />
+    <option name="totallyTimeSpent" value="8293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1041" y="24" width="976" height="1038" extended-state="0" />
@@ -630,17 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#35#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -667,6 +656,17 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#41#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#35#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
