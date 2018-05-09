@@ -39,4 +39,10 @@ describe('TodoList component', () => {
     component.find('.todo-delete').simulate('click');
     expect(deleteMock.mock.calls.length).toEqual(1);
   });
+
+  it('Should call the markTodo function when Mark button is clicked', () => {
+    expect(markMock.mock.calls.length).toEqual(0);
+    component.find('.todo-mark').simulate('click');
+    expect(deleteMock.mock.calls.length).toEqual(1);
+  });
 });

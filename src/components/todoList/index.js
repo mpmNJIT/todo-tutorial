@@ -14,7 +14,7 @@ const TodoList = ({ todos, deleteTodo, markTodo }) => {
         className="todo-mark"
         onClick={() => markTodo(todo.id)}
       >
-            Delete
+            Mark
       </button>
 
       <button
