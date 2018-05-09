@@ -1,28 +1,49 @@
-.App {
+
+body {
+  background-color: #c9f6ff;
+  margin: auto;
+  width: 80%;
+  border: 3px solid dimgray;
+  padding: 10px;
+}
+
+
+.todo-input {
+  margin-right: 10px;
+}
+
+.todo-submit {
+  margin-right: 10px;
+}
+
+.todo-delete {
+  margin-left: 12px;
+  margin-bottom: 8px;
+}
+
+.todo-mark {
+  margin-left: 12px;
+  margin-bottom: 8px;
+}
+
+.edit-submit {
+  margin-left: 12px;
+  margin-bottom: 8px;
+}
+
+.todo-text {
+  font-size: 175%;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+h1 {
   text-align: center;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+button {
+  border-radius: 2px;
+  border-color: lawngreen;
+  background-color: #4CAF50;
   color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
