@@ -15,46 +15,42 @@ const TodoList = ({
         {todo.text}
       </span>
 
-      <div id="buttons-div" style={{ display: 'inline' }}>
 
-        <button
-          type="button"
-          className="todo-mark"
-          onClick={() => markTodo(todo.id)}
-        >
+      <button
+        type="button"
+        className="todo-mark"
+        onClick={() => markTodo(todo.id)}
+      >
             Mark
-        </button>
+      </button>
 
-        <button
-          type="button"
-          className="todo-delete"
-          onClick={() => deleteTodo(todo.id)}
-        >
+      <button
+        type="button"
+        className="todo-delete"
+        onClick={() => deleteTodo(todo.id)}
+      >
                 Delete
-        </button>
+      </button>
 
-      </div>
-
-      <div id="edit-div" style={{ display: 'inline' }}>
-        <form
-          onSubmit={(event) => {
-                    event.preventDefault();
-                    editTodo(todo.id, input.value);
-                    input.value = '';
-                }}
-        >
-          <input
-            className="edit-input"
-            ref={(element) => {
+      <form
+        onSubmit={(event) => {
+                event.preventDefault();
+                editTodo(todo.id, input.value);
+                input.value = '';
+            }}
+      >
+        <input
+          className="edit-input"
+          ref={(element) => {
                     input = element;
                 }}
-          />
-          <button type="Submit" className="edit-submit">
+        />
+        <button type="Submit" className="edit-submit">
 
                     Edit
-          </button>
-        </form>
-      </div>
+        </button>
+      </form>
+
     </li>
   ));
 
