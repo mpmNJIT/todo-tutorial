@@ -35,6 +35,14 @@ export const reducer = (state = initialState, action) => {
             ((todo.id === action.id) ? { ...todo, marked: !todo.marked } : todo)),
         ],
       };
+    case types.EDIT_TODO:
+      return {
+        ...state,
+        todos: [
+          ...state.todos.map(todo =>
+            ((todo.id === action.id) ? { ...todo, text: action.text } : todo)),
+        ],
+      };
     default:
       return state;
   }

@@ -5,6 +5,7 @@ import { reducer, initialState } from '.';
 
 describe('Reducer', () => {
   const todoText = 'A todo';
+  const todoText2 = 'A different todo';
 
   it('Should return the initial state when no action passed', () => {
     expect(reducer(undefined, {})).toEqual(initialState);
@@ -79,6 +80,37 @@ describe('Reducer', () => {
             id: 1,
             text: todoText,
             marked: true,
+          },
+        ],
+      };
+
+      expect(reducer(startingState, action)).toEqual(expectedState);
+    });
+  });
+  describe('Edit todo', () => {
+    it('Should return the correct state', () => {
+      const startingState = {
+        todos: [
+          {
+            id: 1,
+            text: todoText,
+            marked: false,
+          },
+        ],
+      };
+
+      const action = {
+        type: types.EDIT_TODO,
+        id: 1,
+        text: todoText2,
+      };
+
+      const expectedState = {
+        todos: [
+          {
+            id: 1,
+            text: todoText2,
+            marked: false,
           },
         ],
       };
