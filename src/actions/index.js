@@ -27,6 +27,13 @@ const actions = {
       id,
     };
   },
+  editTodo(id, text) {
+    return {
+      type: types.EDIT_TODO,
+      id,
+      text,
+    };
+  },
 };
 
 export default actions;

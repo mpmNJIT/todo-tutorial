@@ -31,4 +31,12 @@ describe('Actions', () => {
 
     expect(actions.markTodo(1)).toEqual(expectedAction);
   });
+  it('Should create an action to edit a todo', () => {
+    const expectedAction = {
+      type: types.EDIT_TODO,
+      id: 1,
+    };
+
+    expect(actions.editTodo(1)).toEqual(expectedAction);
+  });
 });
