@@ -6,12 +6,12 @@ import TodoList from './components/todoList';
 import actions from './actions/';
 
 export const App = ({
-  submitTodo, todos, deleteTodo, markTodo,
+  submitTodo, todos, deleteTodo, markTodo, editTodo,
 }) => (
   <div>
     <h1>Things to do</h1>
     <AddTodo submitTodo={submitTodo} />
-    <TodoList todos={todos} deleteTodo={deleteTodo} markTodo={markTodo} />
+    <TodoList todos={todos} deleteTodo={deleteTodo} markTodo={markTodo} editTodo={editTodo} />
   </div>
 );
 
@@ -24,6 +24,7 @@ App.propTypes = {
   })).isRequired,
   deleteTodo: PropTypes.func.isRequired,
   markTodo: PropTypes.func.isRequired,
+  editTodo: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => state.todoListApp;
@@ -41,6 +42,12 @@ const mapDispatchToProps = dispatch => ({
 
   markTodo: (id) => {
     dispatch(actions.markTodo(id));
+  },
+
+  editTodo: (id, text) => {
+    if (text) {
+      dispatch(actions.editTodo(id, text));
+    }
   },
 });
 

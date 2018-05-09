@@ -11,6 +11,7 @@ configure({ adapter: new Adapter() });
 describe('TodoList component', () => {
   const deleteMock = jest.fn();
   const markMock = jest.fn();
+  const editMock = jest.fn();
 
   const props = {
     todos: [
@@ -22,6 +23,7 @@ describe('TodoList component', () => {
     ],
     deleteTodo: deleteMock,
     markTodo: markMock,
+    editTodo: editMock,
   };
 
   const component = shallow(<TodoList {...props} />);
@@ -43,6 +45,6 @@ describe('TodoList component', () => {
   it('Should call the markTodo function when Mark button is clicked', () => {
     expect(markMock.mock.calls.length).toEqual(0);
     component.find('.todo-mark').simulate('click');
-    expect(deleteMock.mock.calls.length).toEqual(1);
+    expect(markMock.mock.calls.length).toEqual(1);
   });
 });

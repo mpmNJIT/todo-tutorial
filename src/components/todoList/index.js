@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TodoList = ({ todos, deleteTodo, markTodo }) => {
+const TodoList = ({
+  todos, deleteTodo, markTodo, editTodo,
+}) => {
+  let input;
+  const editShow = { display: 'inline' };
   const todoItems = todos.map(todo => (
     <li
       className="todo-obj"
@@ -25,6 +29,27 @@ const TodoList = ({ todos, deleteTodo, markTodo }) => {
                 Delete
       </button>
 
+      <div id="edit-div" style={editShow}>
+        <form
+          onSubmit={(event) => {
+                    event.preventDefault();
+                    editTodo(todo.id, input.value);
+                    input.value = '';
+                }}
+        >
+          <input
+            className="edit-input"
+            ref={(element) => {
+                    input = element;
+                }}
+          />
+          <button type="Submit" className="edit-submit">
+
+                    Edit
+          </button>
+        </form>
+      </div>
+
       <span className="todo-text">
         {todo.text}
       </span>
@@ -46,6 +71,7 @@ TodoList.propTypes = {
   })).isRequired,
   deleteTodo: PropTypes.func.isRequired,
   markTodo: PropTypes.func.isRequired,
+  editTodo: PropTypes.func.isRequired,
 };
 
 export default TodoList;
