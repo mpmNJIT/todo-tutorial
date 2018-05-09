@@ -39,6 +39,7 @@ describe('Reducer', () => {
           {
             id: 1,
             text: todoText,
+            marked: false,
           },
         ],
       };
@@ -50,6 +51,36 @@ describe('Reducer', () => {
 
       const expectedState = {
         todos: [],
+      };
+
+      expect(reducer(startingState, action)).toEqual(expectedState);
+    });
+  });
+  describe('Mark todo', () => {
+    it('Should return the correct state', () => {
+      const startingState = {
+        todos: [
+          {
+            id: 1,
+            text: todoText,
+            marked: false,
+          },
+        ],
+      };
+
+      const action = {
+        type: types.MARK_TODO,
+        id: 1,
+      };
+
+      const expectedState = {
+        todos: [
+          {
+            id: 1,
+            text: todoText,
+            marked: true,
+          },
+        ],
       };
 
       expect(reducer(startingState, action)).toEqual(expectedState);
